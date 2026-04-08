@@ -30,15 +30,29 @@ function Header() {
           Browse <i className="bi bi-caret-down-fill fs-6"></i>
         </Navbar.Toggle>
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 my-lg-0" navbarScroll>
+          <Nav className="me-auto my-2 my-lg-0 navbarLink" navbarScroll>
             <i id="nav-up-icon" class="bi bi-caret-up-fill"></i>
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/shows">Shows</Nav.Link>
-            <Nav.Link href="/movies">Movies</Nav.Link>
-            <Nav.Link href="/games">Games</Nav.Link>
-            <Nav.Link href="/latest">Latest</Nav.Link>
-            <Nav.Link href="/my-list">My List</Nav.Link>
-            <Nav.Link href="/languages">Browse by Languages</Nav.Link>
+            <Nav.Link className="nav-link-hover" href="/">
+              Home
+            </Nav.Link>
+            <Nav.Link className="nav-link-hover" href="/shows">
+              Shows
+            </Nav.Link>
+            <Nav.Link className="nav-link-hover" href="/movies">
+              Movies
+            </Nav.Link>
+            <Nav.Link className="nav-link-hover" href="/games">
+              Games
+            </Nav.Link>
+            <Nav.Link className="nav-link-hover" href="/latest">
+              Latest
+            </Nav.Link>
+            <Nav.Link className="nav-link-hover" href="/my-list">
+              My List
+            </Nav.Link>
+            <Nav.Link className="nav-link-hover" href="/languages">
+              Browse by Languages
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
         <div className="d-flex align-items-center gap-3 ms-auto">

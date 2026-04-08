@@ -9,6 +9,6 @@ a {
   color: inherit; /* Takes the color of the parent element */
   cursor: default; /* Removes the "hand" pointer icon */
 }
-a:hover {
+.footer-link:hover {
   text-decoration: underline;
 }
