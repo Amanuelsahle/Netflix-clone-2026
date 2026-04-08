@@ -1,0 +1,14 @@
+.bi {
+  color: white;
+}
+div {
+  color: grey;
+}
+a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Takes the color of the parent element */
+  cursor: default; /* Removes the "hand" pointer icon */
+}
+a:hover {
+  text-decoration: underline;
+}
