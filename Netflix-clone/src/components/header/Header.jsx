@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -11,12 +11,22 @@ import DropdownDivider from "react-bootstrap/esm/DropdownDivider";
 
 function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <Navbar
       expand="lg"
-      className="bg-body-tertiary "
-      style={{ backgroundColor: "#141414" }}
+      className={`bg-body-tertiary ${scrolled ? "navbar-scrolled" : ""}`}
     >
       <Container fluid>
         <Navbar.Brand href="/" className="col-1">
@@ -31,7 +41,7 @@ function Header() {
         </Navbar.Toggle>
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0 navbarLink" navbarScroll>
-            <i id="nav-up-icon" class="bi bi-caret-up-fill"></i>
+            <i id="nav-up-icon" className="bi bi-caret-up-fill"></i>
             <Nav.Link className="nav-link-hover" href="/">
               Home
             </Nav.Link>
@@ -96,17 +106,17 @@ function Header() {
               <i className="bi bi-pencil me-1"></i> Manage Profile
             </NavDropdown.Item>
             <NavDropdown.Item href="#action3">
-              <i class="bi bi-box-arrow-up-right me-1"></i> Exit Profile
+              <i className="bi bi-box-arrow-up-right me-1"></i> Exit Profile
             </NavDropdown.Item>
             <NavDropdown.Item href="#action3">
-              <i class="bi bi-emoji-neutral me-1"></i>
+              <i className="bi bi-emoji-neutral me-1"></i>
               Transfer Profile
             </NavDropdown.Item>
             <NavDropdown.Item href="#action3">
-              <i class="bi bi-person me-1"></i>Account
+              <i className="bi bi-person me-1"></i>Account
             </NavDropdown.Item>
             <NavDropdown.Item href="#action3">
-              <i class="bi bi-question-circle me-1"></i>Help Center
+              <i className="bi bi-question-circle me-1"></i>Help Center
             </NavDropdown.Item>
             <DropdownDivider />
             <NavDropdown.Item href="/sign-out" className="allign-text-center">

@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap");
+.sectionStyle {
+  position: relative;
+}
+.contentStyle {
+  position: relative;
+  z-index: 2;
+  text-align: "center";
+  padding-top: 18vw;
+  padding-left: 5%;
+}
+
+.contentStyle h1 {
+  font-size: 4vw !important;
+}
+
+.contentStyle p {
+  font-size: 1vw !important;
+}
+.bannerButton {
+  background-color: white;
+  padding: 3px 20px;
+  color: black;
+  border: none;
+}
+.bannerButton:hover {
+  background-color: grey;
+}
+.rating {
+  display: flex;
+  justify-content: flex-end;
+}
+.rating p {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.299);
+  border-left: 2px solid white;
+  padding: 5px 50px 5px 5px;
+}
+div h1,
+p {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500 !important;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: white;
+}
+.fade-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* Adjust height to control how "long" the fade is */
+  height: 30vh;
+  background: linear-gradient(to bottom, transparent, #010101);
+}

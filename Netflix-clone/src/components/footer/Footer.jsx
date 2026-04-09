@@ -8,13 +8,13 @@ function Footer() {
         <div className="row ">
           <div className=" row col-6 col-md-3">
             <div className="col-3">
-              <i class="bi bi-facebook"></i>
+              <i className="bi bi-facebook"></i>
             </div>
             <div className="col-3">
-              <i class="bi bi-instagram"></i>
+              <i className="bi bi-instagram"></i>
             </div>
             <div className="col-3">
-              <i class="bi bi-youtube"></i>
+              <i className="bi bi-youtube"></i>
             </div>
           </div>
         </div>
