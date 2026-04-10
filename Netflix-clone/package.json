@@ -1,10 +1,13 @@
 {
+  "homepage": "https://Amanuelsahle.github.io/Netflix-clone-2026",
   "name": "netflix-clone",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -17,6 +20,7 @@
     "axios": "^1.15.0",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
+    "gh-pages": "^6.3.0",
     "movie-trailer": "^3.2.2",
     "react": "^19.2.4",
     "react-bootstrap": "^2.10.10",
